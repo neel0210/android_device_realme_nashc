@@ -13,5 +13,10 @@ persist.vendor.camera.privapp.list u:object_r:vendor_oplus_prop:s0
 vendor.debug.cameralog.enable      u:object_r:vendor_oplus_prop:s0
 vendor.debug.tpi.                  u:object_r:vendor_oplus_prop:s0
 
+# Media
+ro.vendor.mtk.omx.log                       u:object_r:vendor_mtk_omx_core_prop:s0
+ro.vendor.mtk_crossmount                    u:object_r:vendor_mtk_crossmount_prop:s0
+ro.vendor.mtk_deinterlace                   u:object_r:vendor_mtk_deinterlace_prop:s0
+
 # NFC
 ro.vendor.device.variant           u:object_r:vendor_variant_prop:s0
