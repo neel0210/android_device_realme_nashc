@@ -24,6 +24,15 @@ if [ ! -f "${HELPER}" ]; then
 fi
 source "${HELPER}"
 
+function blob_fixup {
+    case "$1" in
+        vendor/lib64/libmtkcam_stdutils.so)
+            "$PATCHELF" --replace-needed "libutils.so" "libutils-v30.so" "$2"
+            grep -q "$PATCHELF" "libshim_mtkcam.so" || "$PATCHELF" --add-needed "libshim_mtkcam.so" "$2"
+            ;;
+    esac
+}
+
 # Default to sanitizing the vendor folder before extraction
 CLEAN_VENDOR=true
 

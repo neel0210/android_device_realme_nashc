@@ -99,7 +99,9 @@ PRODUCT_PACKAGES += \
     libcamera2ndk_vendor
 
 PRODUCT_PACKAGES += \
-    libcamera_metadata_shim_nashc
+    libcamera_metadata_shim_nashc \
+    libshim_camera_metadata \
+    libshim_mtkcam
 
 # Doze
 PRODUCT_PACKAGES += \
@@ -419,7 +421,9 @@ PRODUCT_PACKAGES += \
 
 # VNDK
 PRODUCT_PACKAGES += \
-    libutils-v32
+    libmedia_helper-v30 \
+    libutils-v32 \
+    libui-v32
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
