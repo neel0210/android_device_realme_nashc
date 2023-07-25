@@ -12,10 +12,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/realme/nashc/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit common LeafOS stuff.
+$(call inherit-product, vendor/leaf/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_nashc
+PRODUCT_NAME := nashc
 PRODUCT_DEVICE := nashc
 PRODUCT_MANUFACTURER := Realme
 PRODUCT_BRAND := Realme
