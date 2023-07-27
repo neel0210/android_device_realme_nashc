@@ -15,6 +15,9 @@ $(call inherit-product, device/realme/nashc/device.mk)
 # Inherit common LeafOS stuff.
 $(call inherit-product, vendor/leaf/config/common_full_phone.mk)
 
+# LeafOS flags
+WITH_GMS := true
+
 PRODUCT_NAME := nashc
 PRODUCT_DEVICE := nashc
 PRODUCT_MANUFACTURER := Realme
