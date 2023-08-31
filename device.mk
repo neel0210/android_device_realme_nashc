@@ -116,6 +116,10 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.2.vendor \
     android.hardware.drm@1.3.vendor
 
+# Dexpreopt
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUIGoogle
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0.vendor \
