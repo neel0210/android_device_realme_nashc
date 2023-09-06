@@ -16,9 +16,9 @@ $(call inherit-product, device/realme/nashc/device.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Rising flags
-RISING_CHIPSET := "Mediatek Helio G95"
-RISING_MAINTAINER := "Blood Corruption"
-RISING_PACKAGE_TYPE := "AOSP"
+RISING_CHIPSET := MT6785
+RISING_MAINTAINER := BloodCorrupt
+RISING_PACKAGE_TYPE := AOSP
 TARGET_BUILD_APERTURE_CAMERA := true
 TARGET_ENABLE_BLUR := false
 TARGET_HAS_UDFPS := true
@@ -26,6 +26,7 @@ TARGET_USE_PIXEL_FINGERPRINT := false
 
 # GMS
 WITH_GMS := true
+TARGET_USE_GOOGLE_TELEPHONY := false
 
 PRODUCT_NAME := lineage_nashc
 PRODUCT_DEVICE := nashc
