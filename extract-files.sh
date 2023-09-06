@@ -26,11 +26,6 @@ source "${HELPER}"
 
 function blob_fixup {
     case "$1" in
-        vendor/lib64/hw/android.hardware.thermal@2.0-impl.so |\
-        vendor/lib64/libaalservice.so)
-            "$PATCHELF" --replace-needed "libutils.so" "libutils-v32.so" "$2"
-            sed -i 's/_ZN7android6Thread3runEPKcim/_ZN7utils326Thread3runEPKcim/g' "$2"
-            ;;
         vendor/lib64/libmtkcam_stdutils.so)
             "$PATCHELF" --replace-needed "libutils.so" "libutils-v30.so" "$2"
             grep -q "$PATCHELF" "libshim_mtkcam.so" || "$PATCHELF" --add-needed "libshim_mtkcam.so" "$2"
